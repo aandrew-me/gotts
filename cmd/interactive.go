@@ -229,7 +229,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 					// play in background
 					go func() {
-						if err := tts.PlayAudio("audio.mp3"); err != nil {
+						if err := tts.PlayAudio(tmpPath); err != nil {
 							fmt.Println("Error playing audio:", err)
 						}
 					}()
